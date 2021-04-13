@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Konami from 'react-konami-code';
 
 function App() {
   return (
@@ -18,9 +19,16 @@ function App() {
         >
           Learn React
         </a>
+        <Konami action={easterEgg}>
+      {"Hey, I'm an Easter Egg! Look at me!"}
+    </Konami>
       </header>
     </div>
   );
+}
+
+function easterEgg() {
+  alert('Hey, you typed the Konami Code!');
 }
 
 export default App;
